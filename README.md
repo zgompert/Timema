@@ -4,6 +4,8 @@
 
 2. Variant calling and filtering
 
+I used GATK (version 3.5) for variant calling. GatkFork.pl was used to control the alignment with the HaplotypeCaller.
+
 ```
 module load gatk
 
@@ -11,12 +13,12 @@ cd /uufs/chpc.utah.edu/common/home/u6000989/data/timema/combind_wgs_dovetailV3/a
 
 perl GatkFork.pl un*bam
 ```
+Here is GatkFork.pl.
 ```
 #!/usr/bin/perl
 #
 # make g.vcf files 
 #
-
 
 use Parallel::ForkManager;
 my $max = 48;
@@ -43,7 +45,7 @@ foreach $bam (@ARGV){
 $pm->wait_all_children;
 
 ```
-
+GenotypeGVCFs was then used to for joint variant calling.
 ```
 module load gatk
 
