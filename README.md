@@ -1,1 +1,1 @@
-# Timema
+# Timema Polygenic Selection
