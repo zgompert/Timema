@@ -62,3 +62,5 @@ Next, I obtained maximum likelihood estimates of allele frequencies for all expe
 ```
 estpEM -i mod_filtered1X_tcrExperimentVariants.gl -o pem_tcr_ecol_all_1X.txt -e 0.001 -m 30 -h 1
 ```
+
+4. Estimation of total selection (selection differentials), ABC model fitting, and inference of LD were done with the C++ programs included in this repository.
